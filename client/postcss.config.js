@@ -9,6 +9,7 @@ module.exports = {
       stage: 3,
       features: {
         'custom-properties': false,
+        'focus-within-pseudo-class': false
       },
     },
   },
