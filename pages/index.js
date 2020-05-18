@@ -1,8 +1,7 @@
-import Nav from '../components/Nav'
+import Layout from '../components/Layout'
 
 export default () => (
-  <div>
-    <Nav />
+  <Layout>
     <header className="bg-white shadow">
       <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-bold leading-tight text-gray-900">
@@ -17,8 +16,5 @@ export default () => (
         </div>
       </div>
     </main>
-    <div className="hero">
-      <h1 className="title"></h1>
-    </div>
-  </div>
+  </Layout>
 )

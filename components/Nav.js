@@ -27,7 +27,7 @@ const DesktopNavItems = () => {
 
           return (
             <a
-              key={href} href={href}
+              key={`${href}${label}`} href={href}
               className={`${first ? classes.first : ""} ${isActive ? classes.onlyActive : classes.onlyNormal} ${classes.common}`}
             >
               {label}
@@ -57,7 +57,7 @@ const MobileNavItems = ({open}) => {
 
           return (
             <a
-              key={href} href={href}
+              key={`${href}${label}`} href={href}
               className={`${first ? classes.first : ""} ${isActive ? classes.onlyActive : classes.onlyNormal} ${classes.common}`}
             >
               {label}
