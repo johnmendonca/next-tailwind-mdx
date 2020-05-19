@@ -9,20 +9,22 @@ const useClickAway = (handler, once=false) => {
   useEffect(() => {
     const clickHandler = (event) => {
       const el = ref.current
+      if (!el) return
       if (el.contains(event.target)) return
+      if (el.offsetParent === null) return
       if (el.offsetWidth < 1 && el.offsetHeight < 1) return
 
       handler(event)
 
       if (once) {
-        document.removeEventListener('click', clickHandler)
+        document.removeEventListener('mousedown', clickHandler)
       }
     }
 
-    document.addEventListener('click', clickHandler)
+    document.addEventListener('mousedown', clickHandler)
 
     return () => {
-      document.removeEventListener('click', clickHandler)
+      document.removeEventListener('mousedown', clickHandler)
     }
   }, [])
 
