@@ -1,5 +1,5 @@
 import React from 'react'
-import MarketingHeader from '../components/MarketingHeader'
+import MarketingHeader from '../components/marketing/MarketingHeader'
 
 const Marketing = () => {
   return (

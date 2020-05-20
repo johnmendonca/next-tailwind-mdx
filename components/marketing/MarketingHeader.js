@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import MarketingOne from './MarketingOne'
 import MarketingTwo from './MarketingTwo'
-import Transition from './Transition'
-import useClickAway from './useClickAway'
+import Transition from '../Transition'
+import useClickAway from '../useClickAway'
 
 const MarketingHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

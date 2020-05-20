@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Transition from './Transition'
-import useClickAway from './useClickAway'
+import Transition from '../Transition'
+import useClickAway from '../useClickAway'
 
 const MarketingOne = () => {
   const [isOpen, setOpen] = useState(false)
