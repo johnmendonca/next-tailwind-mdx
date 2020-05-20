@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import MarketingOne from './MarketingOne'
-import MarketingTwo from './MarketingTwo'
+import { Flyout, FlyoutList, FlyoutItem, FlyoutActionFooter, FooterAction, FlyoutListFooter, FooterListItem } from './Flyout'
+import { CheveronDown, ChartBarOutline, CursorClickOutline, ShieldCheckOutline, ViewGridAddOutline, RefreshOutline, PlayOutline, PhoneOutline, SupportOutline, BookmarkAltOutline, CalendarOutline } from 'heroicons-react'
 import Transition from '../Transition'
 import useClickAway from '../useClickAway'
 
@@ -26,7 +26,49 @@ const MarketingHeader = () => {
           </div>
           <nav className="hidden md:flex space-x-10">
 
-            <MarketingOne />
+            <Flyout title="Solutions">
+              <FlyoutList>
+                <FlyoutItem
+                  icon={ChartBarOutline}
+                  title="Analytics"
+                  content="Get a better understanding of where your traffic is coming from."
+                  href="#" />
+                
+                <FlyoutItem
+                  icon={CursorClickOutline}
+                  title="Engagement"
+                  content="Speak directly to your customers in a more meaningful way."
+                  href="#" />
+                
+                <FlyoutItem
+                  icon={ShieldCheckOutline}
+                  title="Security"
+                  content="Your customers data will be safe and secure."
+                  href="#" />
+                
+                <FlyoutItem
+                  icon={ViewGridAddOutline}
+                  title="Integrations"
+                  content="Connect with third-party tools that you’re already using."
+                  href="#" />
+                
+                <FlyoutItem
+                  icon={RefreshOutline}
+                  title="Automations"
+                  content="Build strategic funnels that will drive your customers to convert"
+                  href="#" />
+              </FlyoutList>
+              <FlyoutActionFooter>
+                <FooterAction
+                  icon={PlayOutline}
+                  title="Watch Demo"
+                  href="#" />
+                <FooterAction
+                  icon={PhoneOutline}
+                  title="Contact Sales"
+                  href="#" />
+              </FlyoutActionFooter>
+            </Flyout>
 
             <a href="#" className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
               Pricing
@@ -35,7 +77,38 @@ const MarketingHeader = () => {
               Docs
             </a>
 
-            <MarketingTwo />
+            <Flyout title="More">
+              <FlyoutList>
+                <FlyoutItem
+                  icon={SupportOutline}
+                  title="Help Center"
+                  content="Get all of your questions answered in our forums or contact support."
+                  href="#" />
+                
+                <FlyoutItem
+                  icon={BookmarkAltOutline}
+                  title="Guides"
+                  content="Learn how to maximize our platform to get the most out of it."
+                  href="#" />
+                
+                <FlyoutItem
+                  icon={CalendarOutline}
+                  title="Events"
+                  content="See what meet-ups and other events we might be planning near you."
+                  href="#" />
+                
+                <FlyoutItem
+                  icon={ShieldCheckOutline}
+                  title="Security"
+                  content="Understand how we take your privacy seriously."
+                  href="#" />
+              </FlyoutList>
+              <FlyoutListFooter title="Recent Posts" moreHref="#" moreText="View all posts &rarr;">
+                <FooterListItem href="#" title="Boost your conversion rate"/>
+                <FooterListItem href="#" title="How to use search engine optimization to drive traffic to your site"/>
+                <FooterListItem href="#" title="Improve your customer experience"/>
+              </FlyoutListFooter>
+            </Flyout>
 
           </nav>
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
