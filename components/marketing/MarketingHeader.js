@@ -136,14 +136,14 @@ const MarketingHeader = () => {
       */}
       <Transition
         show={mobileMenuOpen}
-        enter="transition ease-out duration-200 transform"
+        enter="transition ease-out duration-200"
         enterFrom="opacity-0 scale-95"
         enterTo="opacity-100 scale-100"
-        leave="transition ease-in duration-100 transform"
+        leave="transition ease-in duration-100"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <div ref={mobileMenuRef} className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div ref={mobileMenuRef} className="absolute top-0 inset-x-0 p-2 transform origin-top-right md:hidden">
           <div className="rounded-lg shadow-lg">
             <div className="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5 space-y-6">
