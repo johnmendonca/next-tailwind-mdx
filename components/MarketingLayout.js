@@ -1,13 +1,15 @@
 import React from 'react'
 import MarketingHeader from '../components/marketing/MarketingHeader'
 
-const Marketing = () => {
+const MarketingLayout = ({children}) => {
   return (
     <div>
       <MarketingHeader />
+      {children}
     </div>
   )
 }
 
-export default Marketing
+export default MarketingLayout
+
 
