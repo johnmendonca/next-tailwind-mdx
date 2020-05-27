@@ -63,7 +63,7 @@ const SecondaryDropdown = ({items}) => {
         <div className="transform origin-top-right absolute right-0 mt-2 -mr-1 w-48 rounded-md shadow-lg" aria-labelledby="mobile-menu" role="menu">
           <div className="py-1 rounded-md bg-white shadow-xs">
             {items.map(({icon, label, href}, index) =>
-              <a href={href} className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem">{label}</a>
+              <a key={`${href}${label}`} href={href} className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem">{label}</a>
             )}
           </div>
         </div>
@@ -82,7 +82,7 @@ const HeadingMeta = ({title, metadata, primary, secondary}) => {
 
         <MetaSection>
           {metadata.map(({icon, label}) =>
-            <MetaItem icon={icon} label={label} />
+            <MetaItem key={label} icon={icon} label={label} />
           )}
         </MetaSection>
       </div>
@@ -90,12 +90,12 @@ const HeadingMeta = ({title, metadata, primary, secondary}) => {
       <div className="mt-5 flex lg:mt-0 lg:ml-4">
         {secondary.map(({icon, label, href}, index) => {
           const first = index == 0
-          return <SecondaryAction icon={icon} label={label} href={href} first={first} />
+          return <SecondaryAction key={`${href}${label}`} icon={icon} label={label} href={href} first={first} />
         })}
 
         {primary.map(({icon, label, href}, index) => {
           const first = index == 0
-          return <PrimaryAction icon={icon} label={label} href={href} first={first} />
+          return <PrimaryAction key={`${href}${label}`} icon={icon} label={label} href={href} first={first} />
         })}
 
         <SecondaryDropdown items={secondary} />
