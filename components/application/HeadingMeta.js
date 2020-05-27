@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Transition from '../Transition'
 import useClickAway from '../useClickAway'
-import { CheveronDown, Briefcase, LocationMarker, CurrencyDollar, Calendar, Check, Pencil, Link } from 'heroicons-react'
+import { CheveronDown } from 'heroicons-react'
 
 const MetaSection = (props) => {
   return (
@@ -72,23 +72,7 @@ const SecondaryDropdown = ({items}) => {
   )
 }
 
-const metadata = [
-  { icon: Briefcase, label: 'Full-time' },
-  { icon: LocationMarker, label: 'Remote' },
-  { icon: CurrencyDollar, label: '$120k – $140k' },
-  { icon: Calendar, label: 'Closing on January 9, 2020' }
-]
-
-const primary = [
-  { icon: Check, label: 'Publish', href: '#' }
-]
-
-const secondary = [
-  { icon: Pencil, label: 'Edit', href: '#' },
-  { icon: Link, label: 'View', href: '#' }
-]
-
-const HeadingMeta = ({title}) => {
+const HeadingMeta = ({title, metadata, primary, secondary}) => {
   return (
     <div className="lg:flex lg:items-center lg:justify-between">
       <div className="flex-1 min-w-0">

@@ -1,6 +1,6 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import Nav from './application/Nav'
+import Header from './application/Header'
 
 /*
  * Just an example of how you can customize the blocks in an
@@ -28,7 +28,7 @@ const mdxComponents = {
 const ApplicationLayout = ({ children }) => {
   return (
     <div>
-      <Nav />
+      <Header />
 
       <MDXProvider components={mdxComponents}>
         {children}
