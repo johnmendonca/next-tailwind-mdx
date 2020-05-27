@@ -1,6 +1,6 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import MarketingHeader from './marketing/MarketingHeader'
+import MarketingHeader from './marketing/Header'
 
 const MarketingLayout = ({children}) => {
   return (

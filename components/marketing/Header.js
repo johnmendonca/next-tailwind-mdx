@@ -5,7 +5,7 @@ import { ChartBarOutline, CursorClickOutline, ShieldCheckOutline, ViewGridAddOut
 import Transition from '../Transition'
 import useClickAway from '../useClickAway'
 
-const MarketingHeader = () => {
+const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const mobileMenuRef = useClickAway(() => setMobileMenuOpen(false))
 
@@ -150,5 +150,5 @@ const MarketingHeader = () => {
   )
 }
 
-export default MarketingHeader
+export default Header
 
