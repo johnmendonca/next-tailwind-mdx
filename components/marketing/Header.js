@@ -1,9 +1,21 @@
 import React, { useState } from 'react'
 import { Flyout, FlyoutList, FlyoutItem, FlyoutActionFooter, FooterAction, FlyoutListFooter, FooterListItem } from './Flyout'
-import MobileMenu from './MobileMenu'
-import { MenuOutline, ChartBarOutline, CursorClickOutline, ShieldCheckOutline, ViewGridAddOutline, RefreshOutline, PlayOutline, PhoneOutline, SupportOutline, BookmarkAltOutline, CalendarOutline } from 'heroicons-react'
+import { MobileMenu, MobileSection, MobilePrimaryNav, MobileSecondaryNav, MobilePrimaryItem, MobileSecondaryItem, MobileCTA } from './MobileMenu'
+import { CheveronDown, XOutline, MenuOutline, ChartBarOutline, CursorClickOutline, ShieldCheckOutline, ViewGridAddOutline, RefreshOutline, PlayOutline, PhoneOutline, SupportOutline, BookmarkAltOutline, CalendarOutline } from 'heroicons-react'
 import Transition from '../Transition'
 import useClickAway from '../useClickAway'
+
+const IconButton = (props) => {
+  return <button type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" {...props} />
+}
+
+const HeaderItem = ({href, title}) => {
+  return (
+    <a href={href} className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+      {title}
+    </a>
+  )
+}
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -19,9 +31,9 @@ const Header = () => {
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <button onClick={() => setMobileMenuOpen(true)} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+            <IconButton onClick={() => setMobileMenuOpen(true)}>
               <MenuOutline className="h-6 w-6" />
-            </button>
+            </IconButton>
           </div>
           <nav className="hidden md:flex space-x-10">
 
@@ -132,7 +144,46 @@ const Header = () => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <MobileMenu ref={mobileMenuRef} onClose={() => setMobileMenuOpen(false)} />
+        <MobileMenu ref={mobileMenuRef}>
+          <MobileSection>
+            <div className="flex items-center justify-between">
+              <div>
+                <img className="h-8 w-auto" src="/img/logos/workflow-mark-on-white.svg" alt="Workflow" />
+              </div>
+              <div className="-mr-2">
+                <IconButton onClick={() => setMobileMenuOpen(false)}>
+                  <XOutline className="h-6 w-6" />
+                </IconButton>
+              </div>
+            </div>
+            <MobilePrimaryNav>
+              <MobilePrimaryItem icon={ChartBarOutline} title="Analytics" href="#" />
+              <MobilePrimaryItem icon={CursorClickOutline} title="Engagement" href="#" />
+              <MobilePrimaryItem icon={ShieldCheckOutline} title="Security" href="#" />
+              <MobilePrimaryItem icon={ViewGridAddOutline} title="Integrations" href="#" />
+              <MobilePrimaryItem icon={RefreshOutline} title="Automations" href="#" />
+            </MobilePrimaryNav>
+          </MobileSection>
+          <MobileSection>
+            <MobileSecondaryNav>
+              <MobileSecondaryItem href="#" title="Pricing" />
+              <MobileSecondaryItem href="#" title="Docs" />
+              <MobileSecondaryItem href="#" title="Enterprise" />
+              <MobileSecondaryItem href="#" title="Blog" />
+              <MobileSecondaryItem href="#" title="Help Center" />
+              <MobileSecondaryItem href="#" title="Guides" />
+              <MobileSecondaryItem href="#" title="Security" />
+              <MobileSecondaryItem href="#" title="Events" />
+            </MobileSecondaryNav>
+            <MobileCTA title="Sign up" href="#" />
+            <p className="text-center text-base leading-6 font-medium text-gray-500">
+              Existing customer?&nbsp;
+              <a href="#" className="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150">
+                Sign in
+              </a>
+            </p>
+          </MobileSection>
+        </MobileMenu>
       </Transition>
     </div>
   )
