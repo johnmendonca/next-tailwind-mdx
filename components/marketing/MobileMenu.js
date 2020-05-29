@@ -1,5 +1,4 @@
 import React from 'react'
-import { CheveronDown, XOutline, ChartBarOutline, CursorClickOutline, ShieldCheckOutline, ViewGridAddOutline, RefreshOutline, PlayOutline, PhoneOutline, SupportOutline, BookmarkAltOutline, CalendarOutline } from 'heroicons-react'
 
 export const MobileSection = (props) => {
   return <div className="pt-5 pb-6 px-5 space-y-6" {...props} />
