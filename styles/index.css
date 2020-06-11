@@ -2,7 +2,7 @@
 
 @tailwind base;
 
-@import '../node_modules/github-markdown-css/github-markdown.css';
+@import 'github-markdown-simple.css';
 
 @tailwind components;
 @tailwind utilities;

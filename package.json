@@ -12,7 +12,6 @@
     "@mdx-js/loader": "^1.6.5",
     "@next/mdx": "^9.4.4",
     "@tailwindcss/ui": "^0.3.0",
-    "github-markdown-css": "^4.0.0",
     "heroicons-react": "^1.0.15",
     "next": "^9.4.4",
     "postcss-flexbugs-fixes": "^4.2.1",
