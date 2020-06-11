@@ -2,7 +2,7 @@
 
 @tailwind base;
 
-@import 'github-markdown-simple.css';
+@import 'marketing-markdown.css';
 
 @tailwind components;
 @tailwind utilities;
