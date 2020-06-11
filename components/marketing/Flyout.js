@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CheveronDown } from 'heroicons-react'
+import { ChevronDown } from 'heroicons-react'
 import Transition from '../Transition'
 import useClickAway from '../useClickAway'
 
@@ -80,7 +80,7 @@ export const Flyout = ({title, children}) => {
     <div ref={dropdownRef} className="relative">
       <button onClick={() => setOpen(!isOpen)} type="button" className="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
         <span>{title}</span>
-        <CheveronDown className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" />
+        <ChevronDown className="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150" />
       </button>
 
       <Transition

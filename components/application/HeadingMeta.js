@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Transition from '../Transition'
 import useClickAway from '../useClickAway'
-import { CheveronDown } from 'heroicons-react'
+import { ChevronDown } from 'heroicons-react'
 
 const MetaSection = (props) => {
   return (
@@ -48,7 +48,7 @@ const SecondaryDropdown = ({items}) => {
     <span ref={dropdownRef} className="ml-3 relative shadow-sm rounded-md sm:hidden">
       <button onClick={() => setOpen(!isOpen)} type="button" className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out" id="mobile-menu" aria-haspopup="true">
         More
-        <CheveronDown className="-mr-1 ml-2 h-5 w-5 text-gray-500" />
+        <ChevronDown className="-mr-1 ml-2 h-5 w-5 text-gray-500" />
       </button>
 
       <Transition
