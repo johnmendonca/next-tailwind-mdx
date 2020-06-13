@@ -25,18 +25,14 @@ const Header = () => {
     <div className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+
           <div className="lg:w-0 lg:flex-1">
             <a href="#" className="flex">
               <img className="h-8 w-auto sm:h-10" src="/img/logos/workflow-mark-on-white.svg" alt="Workflow" />
             </a>
           </div>
-          <div className="-mr-2 -my-2 md:hidden">
-            <IconButton onClick={() => setMobileMenuOpen(true)}>
-              <MenuOutline className="h-6 w-6" />
-            </IconButton>
-          </div>
-          <nav className="hidden md:flex space-x-10">
 
+          <nav className="hidden md:flex space-x-10">
             <Flyout title="Solutions">
               <FlyoutList>
                 <FlyoutItem
@@ -117,8 +113,8 @@ const Header = () => {
                 <FooterListItem href="#" title="Improve your customer experience"/>
               </FlyoutListFooter>
             </Flyout>
-
           </nav>
+
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <a href="#" className="whitespace-no-wrap text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900">
               Sign in
@@ -128,6 +124,13 @@ const Header = () => {
                 Sign up
               </a>
             </span>
+          </div>
+
+          {/* Menu Button Mobile */}
+          <div className="-mr-2 -my-2 md:hidden">
+            <IconButton onClick={() => setMobileMenuOpen(true)}>
+              <MenuOutline className="h-6 w-6" />
+            </IconButton>
           </div>
         </div>
       </div>
