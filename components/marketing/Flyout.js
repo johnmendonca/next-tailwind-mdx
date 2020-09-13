@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ChevronDown } from 'heroicons-react'
-import Transition from '../Transition'
+import { Transition } from '@tailwindui/react'
 import useClickAway from '../useClickAway'
 
 export const FlyoutList = (props) => {

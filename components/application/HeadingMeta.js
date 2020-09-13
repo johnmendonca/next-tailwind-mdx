@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Transition from '../Transition'
+import { Transition } from '@tailwindui/react'
 import useClickAway from '../useClickAway'
 import { ChevronDown } from 'heroicons-react'
 

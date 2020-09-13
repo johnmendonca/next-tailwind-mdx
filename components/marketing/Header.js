@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Flyout, FlyoutList, FlyoutItem, FlyoutActionFooter, FooterAction, FlyoutListFooter, FooterListItem } from './Flyout'
 import { MobileMenu, MobileSection, MobilePrimaryNav, MobileSecondaryNav, MobilePrimaryItem, MobileSecondaryItem, MobileCTA } from './MobileMenu'
 import { ChevronDown, XOutline, MenuOutline, ChartBarOutline, CursorClickOutline, ShieldCheckOutline, ViewGridAddOutline, RefreshOutline, PlayOutline, PhoneOutline, SupportOutline, BookmarkAltOutline, CalendarOutline } from 'heroicons-react'
-import Transition from '../Transition'
+import { Transition } from '@tailwindui/react'
 import useClickAway from '../useClickAway'
 
 const IconButton = (props) => {

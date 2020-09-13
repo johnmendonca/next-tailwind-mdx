@@ -18,7 +18,7 @@ const secondary = [
   { icon: Link, label: 'View', href: '#' }
 ]
 
-export default () => (
+const Job = () => (
   <Layout>
     <header className="bg-white shadow">
       <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -35,3 +35,5 @@ export default () => (
     </main>
   </Layout>
 )
+
+export default Job
