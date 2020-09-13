@@ -2,7 +2,7 @@
 
 Project starter including:
 
- * Next.js 9.4
+ * Next.js 9.5
  * TailwindCSS and TailwindUI
  * MDX
 
