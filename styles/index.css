@@ -1,6 +1,11 @@
 @import url('https://rsms.me/inter/inter.css');
 
 @tailwind base;
+
+.prose UL > li {
+  z-index: -1;
+}
+
 @tailwind components;
 @tailwind utilities;
 
