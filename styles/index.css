@@ -2,7 +2,7 @@
 
 @tailwind base;
 
-.prose UL > li {
+.prose ul > li {
   z-index: -1;
 }
 
