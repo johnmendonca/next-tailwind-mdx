@@ -9,6 +9,7 @@ module.exports = {
     extendedFontSizeScale: true,
   },
   future: {
+    removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
   purge: {

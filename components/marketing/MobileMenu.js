@@ -5,11 +5,11 @@ export const MobileSection = (props) => {
 }
 
 export const MobilePrimaryNav = (props) => {
-  return <div><nav className="grid row-gap-8" {...props} /></div>
+  return <div><nav className="grid gap-y-8" {...props} /></div>
 }
 
 export const MobileSecondaryNav = (props) => {
-  return <div className="grid grid-cols-2 row-gap-4 col-gap-8" {...props} />
+  return <div className="grid grid-cols-2 gap-y-4 gap-x-8" {...props} />
 }
 
 export const MobilePrimaryItem = ({icon, title, href}) => {
